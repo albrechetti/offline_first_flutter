@@ -1,6 +1,8 @@
 import 'package:equatable/equatable.dart';
 
-import '../../domain/entities/task.dart';
+import '../../domain/domain.dart';
+
+
 
 abstract class TaskState extends Equatable {
   const TaskState();

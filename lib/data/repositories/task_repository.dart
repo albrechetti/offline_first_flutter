@@ -1,8 +1,9 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 
-import '../../domain/entities/task.dart';
-import '../datasources/local_datasource.dart';
-import '../datasources/remote_datasource.dart';
+import '../../domain/domain.dart';
+import '../datasources/datasources.dart';
+
+
 
 class TaskRepository {
   final LocalDatasource local;
@@ -50,9 +51,6 @@ class TaskRepository {
         return;
       } catch (_) {
         // Save to pending sync if remote fails
-        await local.isar.writeTxn(() async {
-          await local.saveTask(task.copyWith(id: 0));
-        });
       }
     }
   }

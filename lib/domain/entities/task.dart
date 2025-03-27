@@ -19,4 +19,11 @@ class Task {
 
   factory Task.fromJson(Map<String, dynamic> json) =>
       Task(title: json['title'], isCompleted: json['is_completed']);
+
+  Task copyWith({String? title, bool? isCompleted}) {
+    return Task(
+      title: title ?? this.title,
+      isCompleted: isCompleted ?? this.isCompleted,
+    );
+  }
 }

@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:offline_first_flutter/presentation/cubits/task_state.dart';
 
-import '../../data/repositories/task_repository.dart';
-import '../../domain/entities/task.dart';
+import '../../data/data.dart';
+import '../../domain/domain.dart';
 
 class TaskCubit extends Cubit<TaskState> {
   final TaskRepository repository;

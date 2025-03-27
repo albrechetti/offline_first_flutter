@@ -1,6 +1,7 @@
 import 'package:isar/isar.dart';
 
-import '../../domain/entities/task.dart';
+import '../../domain/domain.dart';
+
 
 class LocalDatasource {
   final Isar isar;
